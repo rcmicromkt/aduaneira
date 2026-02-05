@@ -1,0 +1,9 @@
+{
+  "query": "ALTER TABLE `invoices` ADD `dollarValue` decimal(10,2) NOT NULL DEFAULT 1.0;\nALTER TABLE `operations` DROP COLUMN `dollarValue`;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user Xdxb72KqqoEFTw7.root --database ZRGm5EEBixSzLs2rWtne9y --execute ALTER TABLE `invoices` ADD `dollarValue` decimal(10,2) NOT NULL DEFAULT 1.0;\nALTER TABLE `operations` DROP COLUMN `dollarValue`;",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 2715
+}

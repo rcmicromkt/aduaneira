@@ -1,0 +1,1 @@
+ALTER TABLE `invoices` MODIFY COLUMN `dollarValue` decimal(12,4) NOT NULL;

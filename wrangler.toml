@@ -1,0 +1,50 @@
+name = "desembaraco-aduaneiro"
+main = "dist/index.js"
+compatibility_date = "2024-12-19"
+compatibility_flags = ["nodejs_compat"]
+
+# Configuração de build
+[build]
+command = "pnpm install && pnpm build"
+cwd = "."
+
+# Assets estáticos (frontend)
+[site]
+bucket = "dist/public"
+
+# Ambiente de produção
+[env.production]
+# ENVIRONMENT = "production" movido para vars abaixo
+
+# Variáveis de ambiente (não sensíveis)
+[env.production.vars]
+ENVIRONMENT = "production"
+VITE_APP_TITLE = "Desembaraço Aduaneiro"
+VITE_ANALYTICS_ENDPOINT = "https://analytics.rcmicro.com"
+OAUTH_SERVER_URL = "https://api.rcmicro.com"
+VITE_OAUTH_PORTAL_URL = "https://login.rcmicro.com"
+BUILT_IN_FORGE_API_URL = "https://api.rcmicro.com"
+VITE_FRONTEND_FORGE_API_URL = "https://api.rcmicro.com"
+
+# Secrets (sensíveis) - adicionar via: wrangler secret put NOME --env production
+# DATABASE_URL
+# JWT_SECRET
+# VITE_APP_ID
+# OWNER_OPEN_ID
+# OWNER_NAME
+# BUILT_IN_FORGE_API_KEY
+# VITE_FRONTEND_FORGE_API_KEY
+# VITE_APP_LOGO
+# VITE_ANALYTICS_WEBSITE_ID
+
+# Ambiente de desenvolvimento (opcional)
+[env.development]
+
+[env.development.vars]
+ENVIRONMENT = "development"
+VITE_APP_TITLE = "Desembaraço Aduaneiro (Dev)"
+VITE_ANALYTICS_ENDPOINT = "https://analytics.rcmicro.com"
+OAUTH_SERVER_URL = "https://api.rcmicro.com"
+VITE_OAUTH_PORTAL_URL = "https://login.rcmicro.com"
+BUILT_IN_FORGE_API_URL = "https://api.rcmicro.com"
+VITE_FRONTEND_FORGE_API_URL = "https://api.rcmicro.com"

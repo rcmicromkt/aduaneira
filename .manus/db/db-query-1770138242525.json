@@ -1,0 +1,9 @@
+{
+  "query": "ALTER TABLE `clients` ADD `portOrigin` varchar(100);\nALTER TABLE `clients` ADD `portDestination` varchar(100);\nALTER TABLE `clients` DROP COLUMN `port`;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user Xdxb72KqqoEFTw7.root --database ZRGm5EEBixSzLs2rWtne9y --execute ALTER TABLE `clients` ADD `portOrigin` varchar(100);\nALTER TABLE `clients` ADD `portDestination` varchar(100);\nALTER TABLE `clients` DROP COLUMN `port`;",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 2198
+}
