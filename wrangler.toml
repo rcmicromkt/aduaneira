@@ -5,7 +5,7 @@ compatibility_flags = ["nodejs_compat"]
 
 # Configuração de build
 [build]
-command = "pnpm install && pnpm build"
+command = "npm install && npm run build"
 cwd = "."
 
 # Assets estáticos (frontend)
